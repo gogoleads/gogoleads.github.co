@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdFlow - Smart Advertising Management Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🎯</text></svg>">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#ads">Ad Units</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#payments">Payments</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <button class="btn-signin">Sign In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Maximize Your Revenue with Smart Ad Management</h1>
+                    <p>AdFlow helps publishers easily manage ad inventory, optimize revenue, and get detailed data analytics</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Get Started</button>
+                        <button class="btn-secondary">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="dashboard-preview">
+                        <div class="preview-card">
+                            <div class="preview-header">
+                                <span>Today's Revenue</span>
+                                <span class="material-icons">trending_up</span>
+                            </div>
+                            <div class="preview-amount">$1.79</div>
+                            <div class="preview-change">+8.3%</div>
+                        </div>
+                        <div class="preview-mini-cards">
+                            <div class="mini-card">
+                                <span class="material-icons">visibility</span>
+                                <div class="mini-data">
+                                    <span class="mini-label">Impressions</span>
+                                    <span class="mini-value">536</span>
+                                </div>
+                            </div>
+                            <div class="mini-card">
+                                <span class="material-icons">touch_app</span>
+                                <div class="mini-data">
+                                    <span class="mini-label">Clicks</span>
+                                    <span class="mini-value">13</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three Step Process -->
+        <section class="process">
+            <div class="process-container">
+                <h2>Start Earning in Three Steps</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <span class="material-icons">account_circle</span>
+                        </div>
+                        <h3>1. Create Account</h3>
+                        <p>Sign up quickly and verify your website</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <span class="material-icons">code</span>
+                        </div>
+                        <h3>2. Add Ad Code</h3>
+                        <p>Copy the generated code to your website</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <span class="material-icons">payments</span>
+                        </div>
+                        <h3>3. Start Earning</h3>
+                        <p>Automatically display ads and earn revenue share</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Product Integration -->
+        <section class="google-integration">
+            <div class="integration-container">
+                <h2>Seamless Integration with Google Products</h2>
+                <p class="integration-desc">AdFlow is compatible with mainstream ad platforms and Google services, giving you more options</p>
+
+                <!-- Google Ads Logo -->
+                <div class="google-ads-logo">
+                    <div class="logo-ads">
+                        <span class="letter g">G</span>
+                        <span class="letter o1">o</span>
+                        <span class="letter o2">o</span>
+                        <span class="letter g2">g</span>
+                        <span class="letter l">l</span>
+                        <span class="letter e">e</span>
+                        <span class="separator">Ads</span>
+                    </div>
+                    <p class="logo-desc">Official Partner · Fully Compatible with Google Ads API</p>
+                </div>
+
+                <div class="integration-grid">
+                    <div class="integration-card">
+                        <div class="integration-icon google-blue">
+                            <span class="material-icons">search</span>
+                        </div>
+                        <h3>Google Search</h3>
+                        <p>Boost website traffic and exposure through search ads</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon google-red">
+                            <span class="material-icons">movie</span>
+                        </div>
+                        <h3>YouTube</h3>
+                        <p>Video ad partnerships to maximize content creator revenue</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon google-yellow">
+                            <span class="material-icons">cloud</span>
+                        </div>
+                        <h3>Google Cloud</h3>
+                        <p>Powerful cloud-based data processing and storage</p>
+                    </div>
+                    <div class="integration-card">
+                        <div class="integration-icon google-green">
+                            <span class="material-icons">analytics</span>
+                        </div>
+                        <h3>Google Analytics</h3>
+                        <p>In-depth data analytics and user behavior tracking</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="features-container">
+                <h2>Why Choose AdFlow?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="material-icons">analytics</span>
+                        <h3>Real-time Analytics</h3>
+                        <p>Detailed revenue reports and user behavior analysis to help optimize your ad strategy</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="material-icons">devices</span>
+                        <h3>Multi-platform Support</h3>
+                        <p>Full support for websites, mobile apps, and video content across all devices</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="material-icons">security</span>
+                        <h3>Safe & Reliable</h3>
+                        <p>Strict ad review process ensures all ad content is safe and appropriate</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="material-icons">support_agent</span>
+                        <h3>Professional Support</h3>
+                        <p>24/7 expert technical support to resolve any issues you encounter</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Info Section -->
+        <section class="google-info">
+            <div class="google-info-container">
+                <h2>Google Partner Program</h2>
+                <p>AdFlow is a Google-certified ad management platform partner</p>
+                <div class="google-certification">
+                    <div class="cert-badge">
+                        <span class="material-icons">verified</span>
+                        <span>Google Certified Publisher</span>
+                    </div>
+                    <div class="cert-badge">
+                        <span class="material-icons">security</span>
+                        <span>Compliant with Google Policies</span>
+                    </div>
+                    <div class="cert-badge">
+                        <span class="material-icons">support</span>
+                        <span>Google Technical Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Calculator -->
+        <section class="calculator">
+            <div class="calculator-container">
+                <h2>Estimate Your Revenue</h2>
+                <div class="calculator-box">
+                    <div class="calculator-input">
+                        <label for="pageviews">Daily Page Views</label>
+                        <input type="number" id="pageviews" value="10000" min="0">
+                    </div>
+                    <div class="calculator-input">
+                        <label for="rpm">Revenue Per Mille (RPM)</label>
+                        <input type="number" id="rpm" value="15" min="0" step="0.1">
+                    </div>
+                    <div class="calculator-result">
+                        <p>Estimated Monthly Revenue</p>
+                        <h3 id="monthly-revenue">$4,500</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Ad Units</a></li>
+                    <li><a href="#">Revenue Optimization</a></li>
+                    <li><a href="#">Mobile Ads</a></li>
+                    <li><a href="#">Video Ads</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">API Documentation</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><span class="material-icons">facebook</span></a>
+                    <a href="#"><span class="material-icons">twitter</span></a>
+                    <a href="#"><span class="material-icons">linkedin</span></a>
+                    <a href="#"><span class="material-icons">youtube</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AdFlow. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+            <div class="google-partnership">
+                <span>Official Partner:</span>
+                <div class="google-mini-logo">
+                    <span class="g-letter">G</span>
+                    <span class="google-text">Google</span>
+                </div>
+                <span class="partnership-text">Google Certified Publishing Partner</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="login-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sign In to AdFlow</h2>
+                <button class="modal-close" onclick="closeLoginModal()">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <form class="login-form" id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-block">Sign In</button>
+                <p class="signup-link">
+                    Don't have an account? <a href="#">Sign up</a>
+                </p>
+            </form>
+            <div id="loginSuccess" class="login-success" style="display: none;">
+                <span class="material-icons">check_circle</span>
+                <h3>Login Successful!</h3>
+                <p>Welcome back. Click the button below to continue to your dashboard.</p>
+                <button class="btn-primary btn-block" onclick="goToDashboard()">Go to Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check login status immediately when page loads
+        (function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const userEmail = localStorage.getItem('userEmail');
+
+            // If already logged in, update the sign-in button to show email
+            if (isLoggedIn && userEmail) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    const signInBtn = document.querySelector('.btn-signin');
+                    if (signInBtn) {
+                        signInBtn.textContent = userEmail;
+                        signInBtn.href = 'dashboard.html';
+                        signInBtn.onclick = function(e) {
+                            e.preventDefault();
+                            window.location.href = 'dashboard.html';
+                        };
+                    }
+                });
+            }
+        })();
+
+        // Open login modal when Sign In button is clicked
+        function openLoginModal() {
+            const modal = document.getElementById('loginModal');
+            // Reset form state
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('loginForm').reset();
+            document.getElementById('loginSuccess').style.display = 'none';
+            // Show modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLoginModal() {
+            const modal = document.getElementById('loginModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const signInBtn = document.querySelector('.btn-signin');
+            const getStartedBtn = document.querySelector('.btn-primary');
+
+            // Only attach openLoginModal if not already logged in
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (signInBtn && !isLoggedIn) {
+                signInBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openLoginModal();
+                });
+            }
+
+            if (getStartedBtn) {
+                getStartedBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openLoginModal();
+                });
+            }
+
+            // Also open login modal when clicking Dashboard/other nav links
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        // Scroll to section
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    } else if (href === 'dashboard.html') {
+                        if (isLoggedIn) {
+                            window.location.href = href;
+                        } else {
+                            openLoginModal();
+                        }
+                    } else {
+                        window.location.href = href;
+                    }
+                });
+            });
+
+            // Close modal when clicking overlay
+            const modalOverlay = document.querySelector('.modal-overlay');
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', closeLoginModal);
+            }
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeLoginModal();
+                }
+            });
+        });
+
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation (in production, this would be a real API call)
+            if (email && password) {
+                // Store login state
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+
+                // Hide the form and show success message
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('loginSuccess').style.display = 'block';
+            }
+        }
+
+        // Go to dashboard
+        function goToDashboard() {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+
+    <style>
+        .login-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            width: 90%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -45%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .modal-header h2 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #202124;
+            margin: 0;
+        }
+
+        .modal-close {
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: #f1f3f4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover {
+            background: #e8eaed;
+        }
+
+        .modal-close .material-icons {
+            font-size: 20px;
+            color: #5f6368;
+        }
+
+        .login-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .login-form label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5f6368;
+            margin-bottom: 8px;
+        }
+
+        .login-form .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .login-form .form-input:focus {
+            outline: none;
+            border-color: #1a73e8;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #5f6368;
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            margin-right: 8px;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .btn-block {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #5f6368;
+        }
+
+        .signup-link a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .login-success {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .login-success .material-icons {
+            font-size: 64px;
+            color: #34a853;
+            margin-bottom: 16px;
+        }
+
+        .login-success h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 12px;
+        }
+
+        .login-success p {
+            font-size: 14px;
+            color: #5f6368;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>

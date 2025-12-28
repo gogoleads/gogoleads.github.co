@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Analysis - AdFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ads.html">Ad Units</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </button>
+                    <span class="user-email">ohzhulin@gmail.com</span>
+                    <div class="user-dropdown">
+                        <a href="#"><span class="material-icons">person</span> Profile</a>
+                        <a href="#"><span class="material-icons">settings</span> Account Settings</a>
+                        <a href="#"><span class="material-icons">help</span> Help Center</a>
+                        <hr>
+                        <a href="#"><span class="material-icons">logout</span> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-item">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <a href="ads.html" class="sidebar-item">
+                    <span class="material-icons">category</span>
+                    <span>Ad Units</span>
+                </a>
+                <a href="reports.html" class="sidebar-item">
+                    <span class="material-icons">bar_chart</span>
+                    <span>Reports</span>
+                </a>
+                <a href="payments.html" class="sidebar-item">
+                    <span class="material-icons">account_balance</span>
+                    <span>Payments</span>
+                </a>
+                <a href="settings.html" class="sidebar-item">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-title">Analytics</div>
+                <a href="analytics.html" class="sidebar-item">
+                    <span class="material-icons">trending_up</span>
+                    <span>Traffic Trends</span>
+                </a>
+                <a href="visitors.html" class="sidebar-item">
+                    <span class="material-icons">public</span>
+                    <span>Visitor Sources</span>
+                </a>
+                <a href="devices.html" class="sidebar-item">
+                    <span class="material-icons">devices</span>
+                    <span>Device Analysis</span>
+                </a>
+                <a href="geographic.html" class="sidebar-item">
+                    <span class="material-icons">language</span>
+                    <span>Geographic</span>
+                </a>
+                <a href="timeanalysis.html" class="sidebar-item active">
+                    <span class="material-icons">schedule</span>
+                    <span>Time Analysis</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Time Analysis</h1>
+                <div class="date-range">
+                    <select class="date-select">
+                        <option>Last 7 days</option>
+                        <option>Last 30 days</option>
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Time Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Peak Hour</span>
+                        <span class="material-icons">access_time</span>
+                    </div>
+                    <div class="stat-value">9:00 PM</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">trending_up</span>
+                        <span>77 visitors/hour</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Peak Day</span>
+                        <span class="material-icons">calendar_today</span>
+                    </div>
+                    <div class="stat-value">Wednesday</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>18.5% of weekly traffic</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Total Revenue</span>
+                        <span class="material-icons">payments</span>
+                    </div>
+                    <div class="stat-value">$28.67</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>Last 7 days</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">RPM</span>
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <div class="stat-value">$10.59</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>+5.2% vs last period</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Night Traffic (10PM-6AM)</span>
+                        <span class="material-icons">nights_stay</span>
+                    </div>
+                    <div class="stat-value">35.2%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>260 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Business Hours (9AM-6PM)</span>
+                        <span class="material-icons">business</span>
+                    </div>
+                    <div class="stat-value">42.8%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>316 visitors</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Hourly Traffic Distribution</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active">Weekdays</button>
+                            <button class="chart-btn">Weekends</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="hourlyTrafficChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Day of Week Performance</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="dayOfWeekChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hourly Details Table -->
+            <div class="table-card">
+                <div class="card-header">
+                    <h3>Hourly Performance Breakdown</h3>
+                    <button class="btn-icon">
+                        <span class="material-icons">download</span>
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Time Period</th>
+                                <th>Visitors</th>
+                                <th>Page Views</th>
+                                <th>Avg. Duration</th>
+                                <th>Bounce Rate</th>
+                                <th>Revenue</th>
+                                <th>RPM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12:00 AM - 3:00 AM</td>
+                                <td>234</td>
+                                <td>892</td>
+                                <td>3m 45s</td>
+                                <td>42.5%</td>
+                                <td>$8.90</td>
+                                <td>$9.98</td>
+                            </tr>
+                            <tr>
+                                <td>3:00 AM - 6:00 AM</td>
+                                <td>156</td>
+                                <td>534</td>
+                                <td>4m 12s</td>
+                                <td>38.2%</td>
+                                <td>$5.67</td>
+                                <td>$10.62</td>
+                            </tr>
+                            <tr>
+                                <td>6:00 AM - 9:00 AM</td>
+                                <td>567</td>
+                                <td>2,134</td>
+                                <td>4m 56s</td>
+                                <td>32.4%</td>
+                                <td>$24.56</td>
+                                <td>$11.51</td>
+                            </tr>
+                            <tr>
+                                <td>9:00 AM - 12:00 PM</td>
+                                <td>1,234</td>
+                                <td>4,567</td>
+                                <td>4m 23s</td>
+                                <td>35.8%</td>
+                                <td>$52.34</td>
+                                <td>$11.46</td>
+                            </tr>
+                            <tr>
+                                <td>12:00 PM - 3:00 PM</td>
+                                <td>1,456</td>
+                                <td>5,234</td>
+                                <td>4m 45s</td>
+                                <td>33.2%</td>
+                                <td>$61.23</td>
+                                <td>$11.70</td>
+                            </tr>
+                            <tr>
+                                <td>3:00 PM - 6:00 PM</td>
+                                <td>1,345</td>
+                                <td>4,890</td>
+                                <td>4m 34s</td>
+                                <td>34.5%</td>
+                                <td>$56.78</td>
+                                <td>$11.61</td>
+                            </tr>
+                            <tr>
+                                <td>6:00 PM - 9:00 PM</td>
+                                <td>1,678</td>
+                                <td>6,123</td>
+                                <td>5m 12s</td>
+                                <td>30.2%</td>
+                                <td>$78.45</td>
+                                <td>$12.82</td>
+                            </tr>
+                            <tr>
+                                <td>9:00 PM - 12:00 AM</td>
+                                <td>1,234</td>
+                                <td>4,567</td>
+                                <td>5m 34s</td>
+                                <td>28.9%</td>
+                                <td>$67.89</td>
+                                <td>$14.87</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Hourly Traffic Chart
+        const hourlyCtx = document.getElementById('hourlyTrafficChart').getContext('2d');
+        window.hourlyChartInstance = new Chart(hourlyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['12AM', '3AM', '6AM', '9AM', '12PM', '3PM', '6PM', '9PM'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [14, 9, 34, 73, 86, 80, 100, 73],
+                    backgroundColor: '#1a73e8',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Day of Week Chart
+        const dayCtx = document.getElementById('dayOfWeekChart').getContext('2d');
+        window.dayChartInstance = new Chart(dayCtx, {
+            type: 'line',
+            data: {
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [86, 93, 106, 98, 85, 67, 65],
+                    borderColor: '#1a73e8',
+                    backgroundColor: 'rgba(26, 115, 232, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Revenue ($)',
+                    data: [3.69, 4.23, 5.02, 4.65, 3.86, 3.02, 2.94],
+                    borderColor: '#34a853',
+                    backgroundColor: 'rgba(52, 168, 83, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        position: 'left'
+                    },
+                    y1: {
+                        beginAtZero: true,
+                        position: 'right',
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+        // User menu dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const userAvatar = document.querySelector('.user-avatar');
+            if (userAvatar) {
+                userAvatar.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling.nextElementSibling;
+                    if (dropdown) {
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+
+            document.addEventListener('click', function() {
+                const dropdown = document.querySelector('.user-dropdown');
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+
+        // Time selector functionality
+        const dateSelect = document.querySelector('.date-select');
+        if (dateSelect) {
+            dateSelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                updateTimeAnalysisStats(selectedValue);
+            });
+        }
+
+        // Different data sets for each time period
+        const timePeriodData = {
+            'Last 7 days': {
+                peakHour: { time: '9:00 PM', visitors: 77 },
+                peakDay: { day: 'Wednesday', percentage: 18.5 },
+                revenue: 28.67,
+                rpm: 10.59,
+                nightTraffic: { visitors: 260 },
+                businessHours: { visitors: 316 }
+            },
+            'Last 30 days': {
+                peakHour: { time: '8:00 PM', visitors: 331 },
+                peakDay: { day: 'Tuesday', percentage: 17.8 },
+                revenue: 122.89,
+                rpm: 10.52,
+                nightTraffic: { visitors: 1114 },
+                businessHours: { visitors: 1355 }
+            },
+            'This Month': {
+                peakHour: { time: '7:00 PM', visitors: 308 },
+                peakDay: { day: 'Thursday', percentage: 19.2 },
+                revenue: 114.78,
+                rpm: 10.48,
+                nightTraffic: { visitors: 1040 },
+                businessHours: { visitors: 1264 }
+            },
+            'Last Month': {
+                peakHour: { time: '10:00 PM', visitors: 331 },
+                peakDay: { day: 'Friday', percentage: 18.9 },
+                revenue: 123.45,
+                rpm: 10.55,
+                nightTraffic: { visitors: 1117 },
+                businessHours: { visitors: 1359 }
+            }
+        };
+
+        function updateTimeAnalysisStats(timePeriod) {
+            const data = timePeriodData[timePeriod];
+            if (!data) return;
+
+            // Calculate total daily visitors (estimated)
+            const nightHourlyAvg = data.nightTraffic.visitors / 8;
+            const businessHourlyAvg = data.businessHours.visitors / 9;
+            const otherHourlyAvg = (nightHourlyAvg + businessHourlyAvg) / 2;
+            const totalDailyVisitors = data.nightTraffic.visitors + data.businessHours.visitors + (otherHourlyAvg * 7);
+
+            // Calculate percentages
+            const nightPercentage = ((data.nightTraffic.visitors / totalDailyVisitors) * 100).toFixed(1);
+            const businessPercentage = ((data.businessHours.visitors / totalDailyVisitors) * 100).toFixed(1);
+
+            // Get all stat cards and update them
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                const statValue = card.querySelector('.stat-value');
+                const statChangeText = card.querySelector('.stat-change span:last-child');
+
+                if (!statValue) return;
+
+                switch(index) {
+                    case 0: // Peak Hour
+                        statValue.textContent = data.peakHour.time;
+                        if (statChangeText) statChangeText.textContent = `${data.peakHour.visitors.toLocaleString()} visitors/hour`;
+                        break;
+                    case 1: // Peak Day
+                        statValue.textContent = data.peakDay.day;
+                        if (statChangeText) statChangeText.textContent = `${data.peakDay.percentage}% of weekly traffic`;
+                        break;
+                    case 2: // Total Revenue
+                        statValue.textContent = `$${data.revenue.toFixed(2)}`;
+                        break;
+                    case 3: // RPM
+                        statValue.textContent = `$${data.rpm}`;
+                        break;
+                    case 4: // Night Traffic
+                        statValue.textContent = `${nightPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.nightTraffic.visitors.toLocaleString()} visitors`;
+                        break;
+                    case 5: // Business Hours
+                        statValue.textContent = `${businessPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.businessHours.visitors.toLocaleString()} visitors`;
+                        break;
+                }
+            });
+
+            updateTimeAnalysisTable(timePeriod);
+            updateTimeAnalysisCharts(timePeriod);
+        }
+
+        function updateTimeAnalysisTable(timePeriod) {
+            const tableData = {
+                'Last 7 days': [
+                    { visitors: 14, pageViews: 53, revenue: 0.53 },
+                    { visitors: 9, pageViews: 32, revenue: 0.34 },
+                    { visitors: 34, pageViews: 127, revenue: 1.46 },
+                    { visitors: 73, pageViews: 271, revenue: 3.11 },
+                    { visitors: 86, pageViews: 311, revenue: 3.64 },
+                    { visitors: 80, pageViews: 290, revenue: 3.38 },
+                    { visitors: 100, pageViews: 364, revenue: 4.65 },
+                    { visitors: 73, pageViews: 271, revenue: 4.02 }
+                ],
+                'Last 30 days': [
+                    { visitors: 60, pageViews: 227, revenue: 2.26 },
+                    { visitors: 40, pageViews: 136, revenue: 1.44 },
+                    { visitors: 144, pageViews: 543, revenue: 6.25 },
+                    { visitors: 313, pageViews: 1161, revenue: 13.34 },
+                    { visitors: 370, pageViews: 1331, revenue: 15.61 },
+                    { visitors: 342, pageViews: 1244, revenue: 14.45 },
+                    { visitors: 427, pageViews: 1559, revenue: 19.96 },
+                    { visitors: 313, pageViews: 1161, revenue: 17.24 }
+                ],
+                'This Month': [
+                    { visitors: 55, pageViews: 211, revenue: 2.11 },
+                    { visitors: 37, pageViews: 127, revenue: 1.35 },
+                    { visitors: 134, pageViews: 506, revenue: 5.83 },
+                    { visitors: 292, pageViews: 1083, revenue: 12.49 },
+                    { visitors: 345, pageViews: 1242, revenue: 14.59 },
+                    { visitors: 318, pageViews: 1160, revenue: 13.52 },
+                    { visitors: 398, pageViews: 1453, revenue: 18.65 },
+                    { visitors: 292, pageViews: 1083, revenue: 16.09 }
+                ],
+                'Last Month': [
+                    { visitors: 60, pageViews: 228, revenue: 2.29 },
+                    { visitors: 40, pageViews: 137, revenue: 1.46 },
+                    { visitors: 145, pageViews: 549, revenue: 6.31 },
+                    { visitors: 314, pageViews: 1164, revenue: 13.58 },
+                    { visitors: 370, pageViews: 1333, revenue: 15.68 },
+                    { visitors: 344, pageViews: 1249, revenue: 14.68 },
+                    { visitors: 428, pageViews: 1564, revenue: 20.21 },
+                    { visitors: 314, pageViews: 1164, revenue: 17.50 }
+                ]
+            };
+
+            const data = tableData[timePeriod];
+            if (!data) return;
+
+            const tableRows = document.querySelectorAll('.data-table tbody tr');
+            tableRows.forEach((row, index) => {
+                if (index < data.length) {
+                    const cells = row.querySelectorAll('td');
+                    cells[1].textContent = data[index].visitors.toLocaleString();
+                    cells[2].textContent = data[index].pageViews.toLocaleString();
+                    cells[5].textContent = `$${data[index].revenue.toFixed(2)}`;
+                }
+            });
+        }
+
+        function updateTimeAnalysisCharts(timePeriod) {
+            const chartData = {
+                'Last 7 days': {
+                    hourly: [14, 9, 34, 73, 86, 80, 100, 73],
+                    dayVisitors: [86, 93, 106, 98, 85, 67, 65],
+                    dayRevenue: [3.69, 4.23, 5.02, 4.65, 3.86, 3.02, 2.94]
+                },
+                'Last 30 days': {
+                    hourly: [60, 40, 144, 313, 370, 342, 427, 313],
+                    dayVisitors: [370, 398, 454, 420, 364, 285, 279],
+                    dayRevenue: [15.83, 18.11, 21.51, 19.90, 16.52, 12.93, 12.60]
+                },
+                'This Month': {
+                    hourly: [55, 37, 134, 292, 345, 318, 398, 292],
+                    dayVisitors: [345, 371, 423, 391, 338, 265, 259],
+                    dayRevenue: [14.78, 16.90, 20.07, 18.53, 15.36, 12.04, 11.73]
+                },
+                'Last Month': {
+                    hourly: [60, 40, 145, 314, 370, 344, 428, 314],
+                    dayVisitors: [370, 399, 456, 422, 366, 286, 280],
+                    dayRevenue: [15.86, 18.18, 21.62, 20.02, 16.60, 13.00, 12.69]
+                }
+            };
+
+            const data = chartData[timePeriod];
+            if (!data) return;
+
+            const hourlyChart = document.getElementById('hourlyTrafficChart');
+            if (hourlyChart && window.hourlyChartInstance) {
+                window.hourlyChartInstance.data.datasets[0].data = data.hourly;
+                window.hourlyChartInstance.update();
+            }
+
+            const dayChart = document.getElementById('dayOfWeekChart');
+            if (dayChart && window.dayChartInstance) {
+                dayChart.data.datasets[0].data = data.dayVisitors;
+                dayChart.data.datasets[1].data = data.dayRevenue;
+                dayChart.update();
+            }
+        }
+
+        // Store chart instances and trigger initial update
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart instances are already created above
+            // Trigger initial update
+            setTimeout(() => {
+                updateTimeAnalysisStats('Last 7 days');
+            }, 100);
+        });
+    </script>
+</body>
+</html>

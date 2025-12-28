@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Analysis - AdFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ads.html">Ad Units</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </button>
+                    <span class="user-email">ohzhulin@gmail.com</span>
+                    <div class="user-dropdown">
+                        <a href="#"><span class="material-icons">person</span> Profile</a>
+                        <a href="#"><span class="material-icons">settings</span> Account Settings</a>
+                        <a href="#"><span class="material-icons">help</span> Help Center</a>
+                        <hr>
+                        <a href="#"><span class="material-icons">logout</span> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-item">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <a href="ads.html" class="sidebar-item">
+                    <span class="material-icons">category</span>
+                    <span>Ad Units</span>
+                </a>
+                <a href="reports.html" class="sidebar-item">
+                    <span class="material-icons">bar_chart</span>
+                    <span>Reports</span>
+                </a>
+                <a href="payments.html" class="sidebar-item">
+                    <span class="material-icons">account_balance</span>
+                    <span>Payments</span>
+                </a>
+                <a href="settings.html" class="sidebar-item">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-title">Analytics</div>
+                <a href="analytics.html" class="sidebar-item">
+                    <span class="material-icons">trending_up</span>
+                    <span>Traffic Trends</span>
+                </a>
+                <a href="visitors.html" class="sidebar-item">
+                    <span class="material-icons">public</span>
+                    <span>Visitor Sources</span>
+                </a>
+                <a href="devices.html" class="sidebar-item active">
+                    <span class="material-icons">devices</span>
+                    <span>Device Analysis</span>
+                </a>
+                <a href="geographic.html" class="sidebar-item">
+                    <span class="material-icons">language</span>
+                    <span>Geographic</span>
+                </a>
+                <a href="timeanalysis.html" class="sidebar-item">
+                    <span class="material-icons">schedule</span>
+                    <span>Time Analysis</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Device Analysis</h1>
+                <div class="date-range">
+                    <select class="date-select">
+                        <option>Last 7 days</option>
+                        <option>Last 30 days</option>
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Device Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Desktop</span>
+                        <span class="material-icons">computer</span>
+                    </div>
+                    <div class="stat-value">58.3%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>431 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Mobile</span>
+                        <span class="material-icons">smartphone</span>
+                    </div>
+                    <div class="stat-value">38.4%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>284 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Tablet</span>
+                        <span class="material-icons">tablet</span>
+                    </div>
+                    <div class="stat-value">3.2%</div>
+                    <div class="stat-change neutral">
+                        <span class="material-icons">remove</span>
+                        <span>24 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Total Revenue</span>
+                        <span class="material-icons">payments</span>
+                    </div>
+                    <div class="stat-value">$28.67</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>Last 7 days</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Desktop RPM</span>
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <div class="stat-value">$11.45</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>+8.3% vs mobile</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Mobile RPM</span>
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <div class="stat-value">$10.58</div>
+                    <div class="stat-change neutral">
+                        <span class="material-icons">remove</span>
+                        <span>Baseline</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Device Distribution</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="deviceDistChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Revenue by Device</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Device Performance Table -->
+            <div class="table-card">
+                <div class="card-header">
+                    <h3>Device Performance Details</h3>
+                    <button class="btn-icon">
+                        <span class="material-icons">download</span>
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Device</th>
+                                <th>Sessions</th>
+                                <th>Page Views</th>
+                                <th>Avg. Duration</th>
+                                <th>Bounce Rate</th>
+                                <th>Revenue</th>
+                                <th>RPM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="material-icons" style="vertical-align: middle; margin-right: 8px;">computer</span>Desktop</td>
+                                <td>6,876</td>
+                                <td>28,456</td>
+                                <td>5m 23s</td>
+                                <td>32.5%</td>
+                                <td>$354.12</td>
+                                <td>$12.45</td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons" style="vertical-align: middle; margin-right: 8px;">smartphone</span>Mobile</td>
+                                <td>4,543</td>
+                                <td>15,234</td>
+                                <td>3m 45s</td>
+                                <td>45.2%</td>
+                                <td>$175.19</td>
+                                <td>$11.50</td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons" style="vertical-align: middle; margin-right: 8px;">tablet</span>Tablet</td>
+                                <td>395</td>
+                                <td>1,876</td>
+                                <td>6m 12s</td>
+                                <td>28.9%</td>
+                                <td>$24.76</td>
+                                <td>$13.20</td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons" style="vertical-align: middle; margin-right: 8px;">watch</span>Wearable</td>
+                                <td>12</td>
+                                <td>45</td>
+                                <td>1m 30s</td>
+                                <td>65.0%</td>
+                                <td>$0.45</td>
+                                <td>$10.00</td>
+                            </tr>
+                            <tr>
+                                <td><span class="material-icons" style="vertical-align: middle; margin-right: 8px;">tv</span>Smart TV</td>
+                                <td>8</td>
+                                <td>23</td>
+                                <td>8m 45s</td>
+                                <td>22.5%</td>
+                                <td>$0.35</td>
+                                <td>$15.22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Browser Stats -->
+            <div class="table-card" style="margin-top: 24px;">
+                <div class="card-header">
+                    <h3>Top Browsers</h3>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Browser</th>
+                                <th>Sessions</th>
+                                <th>Share</th>
+                                <th>Avg. Load Time</th>
+                                <th>Conversion Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chrome</td>
+                                <td>8,234</td>
+                                <td>62.5%</td>
+                                <td>1.2s</td>
+                                <td>4.5%</td>
+                            </tr>
+                            <tr>
+                                <td>Safari</td>
+                                <td>2,456</td>
+                                <td>18.6%</td>
+                                <td>1.5s</td>
+                                <td>4.2%</td>
+                            </tr>
+                            <tr>
+                                <td>Firefox</td>
+                                <td>1,234</td>
+                                <td>9.4%</td>
+                                <td>1.3s</td>
+                                <td>4.8%</td>
+                            </tr>
+                            <tr>
+                                <td>Edge</td>
+                                <td>876</td>
+                                <td>6.7%</td>
+                                <td>1.4s</td>
+                                <td>4.1%</td>
+                            </tr>
+                            <tr>
+                                <td>Opera</td>
+                                <td>234</td>
+                                <td>1.8%</td>
+                                <td>1.3s</td>
+                                <td>4.3%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Device Distribution Chart
+        const deviceCtx = document.getElementById('deviceDistChart').getContext('2d');
+        window.deviceDistChartInstance = new Chart(deviceCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Desktop', 'Mobile', 'Tablet', 'Other'],
+                datasets: [{
+                    data: [58.3, 38.4, 3.2, 0.1],
+                    backgroundColor: [
+                        '#1a73e8',
+                        '#34a853',
+                        '#fbbc05',
+                        '#ea4335'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Revenue by Device Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        window.revenueChartInstance = new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Desktop', 'Mobile', 'Tablet'],
+                datasets: [{
+                    label: 'Revenue ($)',
+                    data: [20.98, 10.38, 1.47],
+                    backgroundColor: [
+                        '#1a73e8',
+                        '#34a853',
+                        '#fbbc05'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // User menu dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const userAvatar = document.querySelector('.user-avatar');
+            if (userAvatar) {
+                userAvatar.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling.nextElementSibling;
+                    if (dropdown) {
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+
+            document.addEventListener('click', function() {
+                const dropdown = document.querySelector('.user-dropdown');
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+
+        // Time selector functionality
+        const dateSelect = document.querySelector('.date-select');
+        if (dateSelect) {
+            dateSelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                updateDevicesStats(selectedValue);
+            });
+        }
+
+        // Different data sets for each time period
+        const timePeriodData = {
+            'Last 7 days': {
+                desktop: 431,
+                mobile: 284,
+                tablet: 24,
+                wearable: 1,
+                smartTV: 0,
+                revenue: 28.67,
+                desktopRpm: 11.45,
+                mobileRpm: 10.58
+            },
+            'Last 30 days': {
+                desktop: 1846,
+                mobile: 1218,
+                tablet: 101,
+                wearable: 3,
+                smartTV: 2,
+                revenue: 122.89,
+                desktopRpm: 11.42,
+                mobileRpm: 10.55
+            },
+            'This Month': {
+                desktop: 1723,
+                mobile: 1138,
+                tablet: 95,
+                wearable: 3,
+                smartTV: 2,
+                revenue: 114.78,
+                desktopRpm: 11.40,
+                mobileRpm: 10.52
+            },
+            'Last Month': {
+                desktop: 1849,
+                mobile: 1221,
+                tablet: 102,
+                wearable: 3,
+                smartTV: 2,
+                revenue: 123.45,
+                desktopRpm: 11.48,
+                mobileRpm: 10.60
+            }
+        };
+
+        function updateDevicesStats(timePeriod) {
+            const data = timePeriodData[timePeriod];
+            if (!data) return;
+
+            // Calculate total visitors
+            const newTotalVisitors = data.desktop + data.mobile + data.tablet + data.wearable + data.smartTV;
+
+            // Calculate percentages
+            const desktopPercentage = ((data.desktop / newTotalVisitors) * 100).toFixed(1);
+            const mobilePercentage = ((data.mobile / newTotalVisitors) * 100).toFixed(1);
+            const tabletPercentage = ((data.tablet / newTotalVisitors) * 100).toFixed(1);
+
+            // For Last 7 days: 431/740 = 58.2%, 284/740 = 38.4%, 24/740 = 3.2%
+            // For Last 30 days: 1846/3170 = 58.2%, 1218/3170 = 38.4%, 101/3170 = 3.2%
+            // Need to vary the data more to show different percentages
+
+            let adjustedDesktop, adjustedMobile, adjustedTablet;
+            if (timePeriod === 'Last 30 days') {
+                adjustedDesktop = 1855; adjustedMobile = 1199; adjustedTablet = 95;
+            } else if (timePeriod === 'This Month') {
+                adjustedDesktop = 1738; adjustedMobile = 1138; adjustedTablet = 85;
+            } else if (timePeriod === 'Last Month') {
+                adjustedDesktop = 1865; adjustedMobile = 1219; adjustedTablet = 89;
+            } else {
+                adjustedDesktop = data.desktop; adjustedMobile = data.mobile; adjustedTablet = data.tablet;
+            }
+
+            const adjustedTotal = adjustedDesktop + adjustedMobile + adjustedTablet + data.wearable + data.smartTV;
+            const finalDesktopPct = ((adjustedDesktop / adjustedTotal) * 100).toFixed(1);
+            const finalMobilePct = ((adjustedMobile / adjustedTotal) * 100).toFixed(1);
+            const finalTabletPct = ((adjustedTablet / adjustedTotal) * 100).toFixed(1);
+
+            // Get all stat cards and update them
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                const statValue = card.querySelector('.stat-value');
+                const statChangeText = card.querySelector('.stat-change span:last-child');
+
+                if (!statValue) return;
+
+                switch(index) {
+                    case 0: // Desktop
+                        statValue.textContent = `${finalDesktopPct}%`;
+                        if (statChangeText) statChangeText.textContent = `${adjustedDesktop.toLocaleString()} visitors`;
+                        break;
+                    case 1: // Mobile
+                        statValue.textContent = `${finalMobilePct}%`;
+                        if (statChangeText) statChangeText.textContent = `${adjustedMobile.toLocaleString()} visitors`;
+                        break;
+                    case 2: // Tablet
+                        statValue.textContent = `${finalTabletPct}%`;
+                        if (statChangeText) statChangeText.textContent = `${adjustedTablet.toLocaleString()} visitors`;
+                        break;
+                    case 3: // Total Revenue
+                        statValue.textContent = `$${data.revenue.toFixed(2)}`;
+                        break;
+                    case 4: // Desktop RPM
+                        statValue.textContent = `$${data.desktopRpm}`;
+                        break;
+                    case 5: // Mobile RPM
+                        statValue.textContent = `$${data.mobileRpm}`;
+                        break;
+                }
+            });
+
+            updateDevicesTable(timePeriod);
+            updateDevicesCharts(timePeriod);
+        }
+
+        function updateDevicesTable(timePeriod) {
+            const tableData = {
+                'Last 7 days': [
+                    { sessions: 408, pageViews: 1689, revenue: 20.98 },
+                    { sessions: 270, pageViews: 904, revenue: 10.38 },
+                    { sessions: 23, pageViews: 111, revenue: 1.47 },
+                    { sessions: 1, pageViews: 3, revenue: 0.03 },
+                    { sessions: 0, pageViews: 1, revenue: 0.02 }
+                ],
+                'Last 30 days': [
+                    { sessions: 1748, pageViews: 7234, revenue: 89.78 },
+                    { sessions: 1157, pageViews: 3872, revenue: 44.36 },
+                    { sessions: 99, pageViews: 477, revenue: 6.27 },
+                    { sessions: 3, pageViews: 11, revenue: 0.11 },
+                    { sessions: 2, pageViews: 6, revenue: 0.09 }
+                ],
+                'This Month': [
+                    { sessions: 1633, pageViews: 6761, revenue: 83.76 },
+                    { sessions: 1081, pageViews: 3617, revenue: 41.35 },
+                    { sessions: 92, pageViews: 448, revenue: 5.84 },
+                    { sessions: 3, pageViews: 11, revenue: 0.11 },
+                    { sessions: 2, pageViews: 6, revenue: 0.09 }
+                ],
+                'Last Month': [
+                    { sessions: 1752, pageViews: 7254, revenue: 90.12 },
+                    { sessions: 1159, pageViews: 3883, revenue: 44.55 },
+                    { sessions: 99, pageViews: 482, revenue: 6.30 },
+                    { sessions: 3, pageViews: 11, revenue: 0.11 },
+                    { sessions: 2, pageViews: 6, revenue: 0.09 }
+                ]
+            };
+
+            const data = tableData[timePeriod];
+            if (!data) return;
+
+            const tableRows = document.querySelectorAll('.data-table tbody tr');
+            tableRows.forEach((row, index) => {
+                if (index < data.length) {
+                    const cells = row.querySelectorAll('td');
+                    cells[1].textContent = data[index].sessions.toLocaleString();
+                    cells[2].textContent = data[index].pageViews.toLocaleString();
+                    cells[5].textContent = `$${data[index].revenue.toFixed(2)}`;
+                }
+            });
+        }
+
+        function updateDevicesCharts(timePeriod) {
+            const chartData = {
+                'Last 7 days': [58.3, 38.4, 3.2, 0.1, 0.0],
+                'Last 30 days': [58.5, 37.8, 3.0, 0.1, 0.0],
+                'This Month': [58.7, 38.5, 2.9, 0.1, 0.0],
+                'Last Month': [58.9, 38.5, 2.8, 0.1, 0.0]
+            };
+
+            const revenueData = {
+                'Last 7 days': [20.98, 10.38, 1.47, 0.03, 0.02],
+                'Last 30 days': [89.78, 44.36, 6.27, 0.11, 0.09],
+                'This Month': [83.76, 41.35, 5.84, 0.11, 0.09],
+                'Last Month': [90.12, 44.55, 6.30, 0.11, 0.09]
+            };
+
+            const distChart = document.getElementById('deviceDistChart');
+            if (distChart && window.deviceDistChartInstance) {
+                window.deviceDistChartInstance.data.datasets[0].data = chartData[timePeriod];
+                window.deviceDistChartInstance.update();
+            }
+
+            const revenueChart = document.getElementById('revenueChart');
+            if (revenueChart && window.revenueChartInstance) {
+                window.revenueChartInstance.data.datasets[0].data = revenueData[timePeriod];
+                window.revenueChartInstance.update();
+            }
+        }
+
+        // Store chart instances and trigger initial update
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart instances are already created above
+            // Trigger initial update
+            setTimeout(() => {
+                updateDevicesStats('Last 7 days');
+            }, 100);
+        });
+    </script>
+</body>
+</html>

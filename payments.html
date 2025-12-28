@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - AdFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🎯</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ads.html">Ad Units</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="payments.html" class="active">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </button>
+                    <span class="user-email">ohzhulin@gmail.com</span>
+                    <div class="user-dropdown">
+                        <a href="#"><span class="material-icons">person</span> Profile</a>
+                        <a href="#"><span class="material-icons">settings</span> Account Settings</a>
+                        <a href="#"><span class="material-icons">help</span> Help Center</a>
+                        <hr>
+                        <a href="#"><span class="material-icons">logout</span> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-item">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <a href="ads.html" class="sidebar-item">
+                    <span class="material-icons">category</span>
+                    <span>Ad Units</span>
+                </a>
+                <a href="reports.html" class="sidebar-item">
+                    <span class="material-icons">bar_chart</span>
+                    <span>Reports</span>
+                </a>
+                <a href="payments.html" class="sidebar-item active">
+                    <span class="material-icons">account_balance</span>
+                    <span>Payments</span>
+                </a>
+                <a href="settings.html" class="sidebar-item">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-title">Analytics</div>
+                <a href="analytics.html" class="sidebar-item">
+                    <span class="material-icons">trending_up</span>
+                    <span>Traffic Trends</span>
+                </a>
+                <a href="visitors.html" class="sidebar-item">
+                    <span class="material-icons">public</span>
+                    <span>Visitor Sources</span>
+                </a>
+                <a href="devices.html" class="sidebar-item">
+                    <span class="material-icons">devices</span>
+                    <span>Device Analysis</span>
+                </a>
+                <a href="geographic.html" class="sidebar-item">
+                    <span class="material-icons">language</span>
+                    <span>Geographic</span>
+                </a>
+                <a href="timeanalysis.html" class="sidebar-item">
+                    <span class="material-icons">schedule</span>
+                    <span>Time Analysis</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Payment History</h1>
+                <button class="btn-primary">Payment Settings</button>
+            </header>
+
+            <!-- Balance Overview -->
+            <div class="balance-overview">
+                <div class="balance-card main">
+                    <div class="balance-header">
+                        <span class="material-icons">account_balance_wallet</span>
+                        <span>Current Balance</span>
+                    </div>
+                    <div class="balance-amount">$43.44</div>
+                    <div class="balance-info">
+                        <p>Available for withdrawal</p>
+                        <small>Minimum payment threshold: $100</small>
+                    </div>
+                    <button class="btn-primary">Request Payment</button>
+                </div>
+
+                <div class="balance-card">
+                    <div class="balance-header">
+                        <span class="material-icons">calendar_month</span>
+                        <span>Next Payment</span>
+                    </div>
+                    <div class="balance-date">January 31, 2026</div>
+                    <div class="balance-info">
+                        <p>Scheduled payment date</p>
+                        <small>Estimated amount: $43.44</small>
+                    </div>
+                </div>
+
+                <div class="balance-card">
+                    <div class="balance-header">
+                        <span class="material-icons">payment</span>
+                        <span>Payment Method</span>
+                    </div>
+                    <div class="payment-method">
+                        <span class="material-icons">currency_bitcoin</span>
+                        <div>
+                            <p>USDT (TRC20)</p>
+                            <small>Wallet: Txxx...xxxx</small>
+                        </div>
+                    </div>
+                    <button class="btn-secondary">Change</button>
+                </div>
+            </div>
+
+            <!-- Payment History -->
+            <div class="payment-history-section">
+                <h2>Transaction History</h2>
+
+                <div class="transaction-filters">
+                    <select class="filter-select">
+                        <option value="all">All Transactions</option>
+                        <option value="revenue">Revenue</option>
+                        <option value="payment">Payments</option>
+                        <option value="adjustment">Adjustments</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="all">All Time</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                    <button class="btn-secondary">Export CSV</button>
+                </div>
+
+                <div class="transactions-list">
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>December 2025</h3>
+                            <span class="group-total">+$89.75</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon revenue">
+                                <span class="material-icons">trending_up</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Ad Revenue - seodog.cn</h4>
+                                <p>Dec 1 - Dec 28, 2025</p>
+                            </div>
+                            <div class="transaction-amount positive">
+                                <span class="amount">+$89.75</span>
+                                <span class="status">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>November 2025</h3>
+                            <span class="group-total">+$132.47</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon revenue">
+                                <span class="material-icons">trending_up</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Ad Revenue - seodog.cn</h4>
+                                <p>Nov 1 - Nov 30, 2025</p>
+                            </div>
+                            <div class="transaction-amount positive">
+                                <span class="amount">+$132.47</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>October 2025</h3>
+                            <span class="group-total">+$125.63 - $195.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">dns</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Namecheap</h4>
+                                <p>Oct 17, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$20.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">smart_toy</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>GTP API</h4>
+                                <p>Oct 9, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$75.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon payment">
+                                <span class="material-icons">payment</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>USDT Withdrawal</h4>
+                                <p>Processed Nov 25, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$100.00</span>
+                                <span class="status">Completed</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon revenue">
+                                <span class="material-icons">trending_up</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Ad Revenue - seodog.cn</h4>
+                                <p>Oct 1 - Oct 31, 2025</p>
+                            </div>
+                            <div class="transaction-amount positive">
+                                <span class="amount">+$125.63</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>September 2025</h3>
+                            <span class="group-total">+$135.59 - $85.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">psychology</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>CLAUDE Pro API</h4>
+                                <p>Sep 24, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$85.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon revenue">
+                                <span class="material-icons">trending_up</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Ad Revenue - seodog.cn</h4>
+                                <p>Sep 1 - Sep 30, 2025</p>
+                            </div>
+                            <div class="transaction-amount positive">
+                                <span class="amount">+$135.59</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expenses Section -->
+            <div class="payment-history-section" style="margin-top: 40px;">
+                <h2>Expense Records</h2>
+
+                <div class="transactions-list">
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>December 2025</h3>
+                            <span class="group-total expense">-$120.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">api</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Gemini Pro API</h4>
+                                <p>Dec 1 - Dec 28, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$20.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">cloud</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>YUNWU API</h4>
+                                <p>Dec 6, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$100.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>November 2025</h3>
+                            <span class="group-total expense">-$120.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">api</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Gemini Pro API</h4>
+                                <p>Nov 1 - Nov 30, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$20.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">cloud</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>YUNWU API</h4>
+                                <p>Nov 4, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$100.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>October 2025</h3>
+                            <span class="group-total expense">-$95.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">api</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Gemini Pro API</h4>
+                                <p>Oct 1 - Oct 31, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$20.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">dns</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Namecheap</h4>
+                                <p>Oct 17, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$20.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">smart_toy</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>GTP API</h4>
+                                <p>Oct 9, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$75.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-group">
+                        <div class="group-header">
+                            <h3>September 2025</h3>
+                            <span class="group-total expense">-$105.00</span>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">api</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>Gemini Pro API</h4>
+                                <p>Sep 1 - Sep 30, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$20.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon expense">
+                                <span class="material-icons">psychology</span>
+                            </div>
+                            <div class="transaction-details">
+                                <h4>CLAUDE Pro API</h4>
+                                <p>Sep 24, 2025</p>
+                            </div>
+                            <div class="transaction-amount negative">
+                                <span class="amount">-$85.00</span>
+                                <span class="status">Paid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expense Summary Card -->
+                <div class="expense-summary-card">
+                    <div class="summary-header">
+                        <h3><span class="material-icons">receipt_long</span>Total Expenses (Sep - Dec 2025)</h3>
+                    </div>
+                    <div class="summary-amount">-$440.00</div>
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>Gemini Pro API</span>
+                            <span>4 months × $20.00 = $80.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>YUNWU API</span>
+                            <span>2 payments × $100.00 = $200.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>GTP API</span>
+                            <span>1 payment = $75.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>CLAUDE Pro API</span>
+                            <span>1 payment = $85.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Namecheap</span>
+                            <span>1 payment = $20.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="payment-info-cards">
+                <div class="info-card">
+                    <h3><span class="material-icons">info</span>Payment Schedule</h3>
+                    <ul>
+                        <li>Payments are processed monthly</li>
+                        <li>Minimum payment threshold: $100</li>
+                        <li>Processing time: 5-7 business days</li>
+                        <li>Payment day: Last day of the month</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3><span class="material-icons">help_outline</span>Need Help?</h3>
+                    <ul>
+                        <li><a href="#">Payment FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Update payment details</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        .balance-overview {
+            display: grid;
+            grid-template-columns: 2fr repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+        .balance-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .balance-card.main {
+            background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+            color: white;
+        }
+        .balance-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .balance-header .material-icons {
+            font-size: 24px;
+        }
+        .balance-card.main .balance-header .material-icons {
+            color: rgba(255,255,255,0.9);
+        }
+        .balance-card .balance-header span:last-child {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .balance-amount {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .balance-card.main .balance-amount {
+            color: white;
+        }
+        .balance-info {
+            margin-bottom: 20px;
+        }
+        .balance-info p {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .balance-info small {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        .balance-card:not(.main) .balance-amount {
+            font-size: 36px;
+            color: #1a73e8;
+            margin-bottom: 8px;
+        }
+        .balance-date {
+            font-size: 28px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 8px;
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .payment-method .material-icons {
+            font-size: 36px;
+            color: #34a853;
+        }
+        .payment-method p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .payment-method small {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .payment-history-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .transaction-filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .filter-select {
+            padding: 8px 16px;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .transaction-group {
+            margin-bottom: 30px;
+        }
+        .transaction-group:last-child {
+            margin-bottom: 0;
+        }
+        .group-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 2px solid #e8eaed;
+            margin-bottom: 16px;
+        }
+        .group-header h3 {
+            font-size: 16px;
+            color: #5f6368;
+        }
+        .group-total {
+            font-size: 16px;
+            font-weight: 600;
+            color: #34a853;
+        }
+        .transaction-item {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .transaction-item:hover {
+            background: #f8f9fa;
+        }
+        .transaction-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+        }
+        .transaction-icon.revenue {
+            background: #e8f5e9;
+        }
+        .transaction-icon.revenue .material-icons {
+            color: #34a853;
+        }
+        .transaction-icon.payment {
+            background: #fce8e6;
+        }
+        .transaction-icon.payment .material-icons {
+            color: #ea4335;
+        }
+        .transaction-icon.expense {
+            background: #fff3e0;
+        }
+        .transaction-icon.expense .material-icons {
+            color: #f57c00;
+        }
+        .group-total.expense {
+            color: #f57c00;
+        }
+        .expense-summary-card {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+            border: 2px solid #ffb74d;
+        }
+        .summary-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .summary-header h3 {
+            font-size: 18px;
+            color: #e65100;
+        }
+        .summary-header .material-icons {
+            color: #f57c00;
+        }
+        .summary-amount {
+            font-size: 36px;
+            font-weight: 600;
+            color: #e65100;
+            margin-bottom: 16px;
+        }
+        .summary-details {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .transaction-details {
+            flex: 1;
+        }
+        .transaction-details h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .transaction-details p {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .transaction-amount {
+            text-align: right;
+        }
+        .transaction-amount .amount {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .transaction-amount.positive .amount {
+            color: #34a853;
+        }
+        .transaction-amount.negative .amount {
+            color: #ea4335;
+        }
+        .transaction-amount .status {
+            font-size: 12px;
+            color: #5f6368;
+        }
+        .payment-info-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .info-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        .info-card h3 .material-icons {
+            color: #1a73e8;
+        }
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-card li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .info-card a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .info-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>

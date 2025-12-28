@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Sources - AdFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ads.html">Ad Units</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </button>
+                    <span class="user-email">ohzhulin@gmail.com</span>
+                    <div class="user-dropdown">
+                        <a href="#"><span class="material-icons">person</span> Profile</a>
+                        <a href="#"><span class="material-icons">settings</span> Account Settings</a>
+                        <a href="#"><span class="material-icons">help</span> Help Center</a>
+                        <hr>
+                        <a href="#"><span class="material-icons">logout</span> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-item">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <a href="ads.html" class="sidebar-item">
+                    <span class="material-icons">category</span>
+                    <span>Ad Units</span>
+                </a>
+                <a href="reports.html" class="sidebar-item">
+                    <span class="material-icons">bar_chart</span>
+                    <span>Reports</span>
+                </a>
+                <a href="payments.html" class="sidebar-item">
+                    <span class="material-icons">account_balance</span>
+                    <span>Payments</span>
+                </a>
+                <a href="settings.html" class="sidebar-item">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-title">Analytics</div>
+                <a href="analytics.html" class="sidebar-item">
+                    <span class="material-icons">trending_up</span>
+                    <span>Traffic Trends</span>
+                </a>
+                <a href="visitors.html" class="sidebar-item active">
+                    <span class="material-icons">public</span>
+                    <span>Visitor Sources</span>
+                </a>
+                <a href="devices.html" class="sidebar-item">
+                    <span class="material-icons">devices</span>
+                    <span>Device Analysis</span>
+                </a>
+                <a href="geographic.html" class="sidebar-item">
+                    <span class="material-icons">language</span>
+                    <span>Geographic</span>
+                </a>
+                <a href="timeanalysis.html" class="sidebar-item">
+                    <span class="material-icons">schedule</span>
+                    <span>Time Analysis</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Visitor Sources</h1>
+                <div class="date-range">
+                    <select class="date-select">
+                        <option>Last 7 days</option>
+                        <option>Last 30 days</option>
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Source Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Organic Search</span>
+                        <span class="material-icons">search</span>
+                    </div>
+                    <div class="stat-value">42.8%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>382 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Direct Traffic</span>
+                        <span class="material-icons">link</span>
+                    </div>
+                    <div class="stat-value">31.9%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>285 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Total Revenue</span>
+                        <span class="material-icons">payments</span>
+                    </div>
+                    <div class="stat-value">$35.42</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>Last 7 days</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">RPM</span>
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <div class="stat-value">$10.59</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>+5.2% vs last period</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Social Media</span>
+                        <span class="material-icons">share</span>
+                    </div>
+                    <div class="stat-value">10.6%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>95 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Total Visitors</span>
+                        <span class="material-icons">people</span>
+                    </div>
+                    <div class="stat-value">892</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>+12.3% vs last period</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Source Distribution</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="sourceDistributionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Source Trend</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="sourceTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Referral Sites Table -->
+            <div class="table-card">
+                <div class="card-header">
+                    <h3>Top Referral Sites</h3>
+                    <button class="btn-icon">
+                        <span class="material-icons">download</span>
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th>Visitors</th>
+                                <th>Sessions</th>
+                                <th>Avg. Duration</th>
+                                <th>Pages/Session</th>
+                                <th>Conversion Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>google.com</td>
+                                <td>3,456</td>
+                                <td>4,234</td>
+                                <td>3m 45s</td>
+                                <td>4.2</td>
+                                <td>5.8%</td>
+                            </tr>
+                            <tr>
+                                <td>bing.com</td>
+                                <td>1,234</td>
+                                <td>1,567</td>
+                                <td>4m 12s</td>
+                                <td>3.8</td>
+                                <td>4.5%</td>
+                            </tr>
+                            <tr>
+                                <td>twitter.com</td>
+                                <td>876</td>
+                                <td>1,123</td>
+                                <td>2m 34s</td>
+                                <td>2.5</td>
+                                <td>3.2%</td>
+                            </tr>
+                            <tr>
+                                <td>facebook.com</td>
+                                <td>654</td>
+                                <td>890</td>
+                                <td>2m 15s</td>
+                                <td>2.3</td>
+                                <td>2.8%</td>
+                            </tr>
+                            <tr>
+                                <td>linkedin.com</td>
+                                <td>432</td>
+                                <td>567</td>
+                                <td>5m 23s</td>
+                                <td>4.5</td>
+                                <td>6.2%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Source Distribution Chart
+        const distCtx = document.getElementById('sourceDistributionChart').getContext('2d');
+        window.sourceDistChartInstance = new Chart(distCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Organic Search', 'Direct', 'Referral', 'Social Media', 'Email'],
+                datasets: [{
+                    data: [42.8, 31.9, 10.6, 10.6, 4.0],
+                    backgroundColor: [
+                        '#1a73e8',
+                        '#34a853',
+                        '#fbbc05',
+                        '#ea4335',
+                        '#9c27b0'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Source Trend Chart
+        const trendCtx = document.getElementById('sourceTrendChart').getContext('2d');
+        window.sourceTrendChartInstance = new Chart(trendCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Organic',
+                    data: [48, 56, 52, 61, 58, 43, 47],
+                    borderColor: '#1a73e8',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    tension: 0.4
+                }, {
+                    label: 'Direct',
+                    data: [30, 35, 33, 39, 37, 28, 31],
+                    borderColor: '#34a853',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    tension: 0.4
+                }, {
+                    label: 'Referral',
+                    data: [17, 19, 18, 21, 20, 15, 17],
+                    borderColor: '#fbbc05',
+                    backgroundColor: 'transparent',
+                    borderWidth: 2,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // User menu dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const userAvatar = document.querySelector('.user-avatar');
+            if (userAvatar) {
+                userAvatar.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling.nextElementSibling;
+                    if (dropdown) {
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+
+            document.addEventListener('click', function() {
+                const dropdown = document.querySelector('.user-dropdown');
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+
+        // Time selector functionality
+        const dateSelect = document.querySelector('.date-select');
+        if (dateSelect) {
+            dateSelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                updateVisitorsStats(selectedValue);
+            });
+        }
+
+        // Different data sets for each time period to show realistic variation
+        const timePeriodData = {
+            'Last 7 days': {
+                organicSearch: 382,
+                directTraffic: 285,
+                socialMedia: 95,
+                totalVisitors: 892,
+                revenue: 35.42,
+                rpm: 10.59
+            },
+            'Last 30 days': {
+                organicSearch: 1523,
+                directTraffic: 1089,
+                socialMedia: 365,
+                totalVisitors: 3542,
+                revenue: 140.67,
+                rpm: 10.45
+            },
+            'This Month': {
+                organicSearch: 1398,
+                directTraffic: 1012,
+                socialMedia: 334,
+                totalVisitors: 3245,
+                revenue: 128.34,
+                rpm: 10.52
+            },
+            'Last Month': {
+                organicSearch: 1498,
+                directTraffic: 1076,
+                socialMedia: 356,
+                totalVisitors: 3432,
+                revenue: 136.78,
+                rpm: 10.48
+            }
+        };
+
+        function updateVisitorsStats(timePeriod) {
+            const data = timePeriodData[timePeriod];
+            if (!data) return;
+
+            // Calculate percentages based on total visitors for this time period
+            const organicPercentage = ((data.organicSearch / data.totalVisitors) * 100).toFixed(1);
+            const directPercentage = ((data.directTraffic / data.totalVisitors) * 100).toFixed(1);
+            const socialPercentage = ((data.socialMedia / data.totalVisitors) * 100).toFixed(1);
+
+            // Get all stat cards and their values/changes
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                const statValue = card.querySelector('.stat-value');
+                const statChangeText = card.querySelector('.stat-change span:last-child');
+
+                if (!statValue) return;
+
+                switch(index) {
+                    case 0: // Organic Search
+                        statValue.textContent = `${organicPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.organicSearch.toLocaleString()} visitors`;
+                        break;
+                    case 1: // Direct Traffic
+                        statValue.textContent = `${directPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.directTraffic.toLocaleString()} visitors`;
+                        break;
+                    case 2: // Total Revenue
+                        statValue.textContent = `$${data.revenue.toFixed(2)}`;
+                        break;
+                    case 3: // RPM
+                        statValue.textContent = `$${data.rpm}`;
+                        break;
+                    case 4: // Social Media
+                        statValue.textContent = `${socialPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.socialMedia.toLocaleString()} visitors`;
+                        break;
+                    case 5: // Total Visitors
+                        statValue.textContent = data.totalVisitors.toLocaleString();
+                        break;
+                }
+            });
+
+            updateVisitorsTable(timePeriod);
+            updateVisitorsCharts(timePeriod);
+        }
+
+        function updateVisitorsTable(timePeriod) {
+            const tableData = {
+                'Last 7 days': [
+                    { visitors: 234, sessions: 298 },
+                    { visitors: 87, sessions: 115 },
+                    { visitors: 62, sessions: 82 },
+                    { visitors: 45, sessions: 62 },
+                    { visitors: 31, sessions: 42 }
+                ],
+                'Last 30 days': [
+                    { visitors: 923, sessions: 1156 },
+                    { visitors: 345, sessions: 445 },
+                    { visitors: 245, sessions: 312 },
+                    { visitors: 182, sessions: 245 },
+                    { visitors: 121, sessions: 156 }
+                ],
+                'This Month': [
+                    { visitors: 845, sessions: 1056 },
+                    { visitors: 312, sessions: 398 },
+                    { visitors: 223, sessions: 287 },
+                    { visitors: 165, sessions: 223 },
+                    { visitors: 109, sessions: 142 }
+                ],
+                'Last Month': [
+                    { visitors: 898, sessions: 1123 },
+                    { visitors: 334, sessions: 423 },
+                    { visitors: 238, sessions: 305 },
+                    { visitors: 176, sessions: 237 },
+                    { visitors: 117, sessions: 152 }
+                ]
+            };
+
+            const data = tableData[timePeriod];
+            if (!data) return;
+
+            const tableRows = document.querySelectorAll('.data-table tbody tr');
+            tableRows.forEach((row, index) => {
+                if (index < data.length) {
+                    const cells = row.querySelectorAll('td');
+                    cells[1].textContent = data[index].visitors.toLocaleString();
+                    cells[2].textContent = data[index].sessions.toLocaleString();
+                }
+            });
+        }
+
+        function updateVisitorsCharts(timePeriod) {
+            const chartData = {
+                'Last 7 days': {
+                    organic: [48, 56, 52, 61, 58, 43, 47],
+                    direct: [30, 35, 33, 39, 37, 28, 31],
+                    referral: [17, 19, 18, 21, 20, 15, 17]
+                },
+                'Last 30 days': {
+                    organic: [192, 226, 208, 245, 234, 173, 188],
+                    direct: [121, 140, 130, 154, 147, 109, 119],
+                    referral: [67, 78, 72, 85, 81, 60, 65]
+                },
+                'This Month': {
+                    organic: [176, 207, 190, 225, 215, 159, 173],
+                    direct: [111, 128, 119, 141, 135, 100, 109],
+                    referral: [61, 71, 66, 78, 74, 55, 60]
+                },
+                'Last Month': {
+                    organic: [188, 221, 203, 241, 230, 168, 183],
+                    direct: [118, 137, 127, 151, 144, 106, 116],
+                    referral: [65, 76, 71, 84, 80, 59, 64]
+                }
+            };
+
+            const data = chartData[timePeriod];
+            if (!data) return;
+
+            const trendChart = document.getElementById('sourceTrendChart');
+            if (trendChart && window.sourceTrendChartInstance) {
+                window.sourceTrendChartInstance.data.datasets[0].data = data.organic;
+                window.sourceTrendChartInstance.data.datasets[1].data = data.direct;
+                window.sourceTrendChartInstance.data.datasets[2].data = data.referral;
+                window.sourceTrendChartInstance.update();
+            }
+
+            // Update distribution chart
+            const distChart = document.getElementById('sourceDistributionChart');
+            if (distChart && window.sourceDistChartInstance) {
+                const distributionData = {
+                    'Last 7 days': [42.8, 31.9, 10.6, 10.6, 4.0],
+                    'Last 30 days': [43.0, 30.7, 10.3, 10.3, 5.7],
+                    'This Month': [43.1, 31.2, 10.3, 10.3, 5.1],
+                    'Last Month': [43.7, 31.4, 10.4, 10.4, 4.2]
+                };
+                window.sourceDistChartInstance.data.datasets[0].data = distributionData[timePeriod];
+                window.sourceDistChartInstance.update();
+            }
+        }
+
+        // Store chart instances
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart instances are already created above
+            // Just trigger initial update for Last 7 days (default selection)
+            setTimeout(() => {
+                updateVisitorsStats('Last 7 days');
+            }, 100);
+        });
+    </script>
+</body>
+</html>

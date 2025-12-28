@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AdFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="ads.html">Ad Units</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </button>
+                    <span class="user-email">ohzhulin@gmail.com</span>
+                    <div class="user-dropdown">
+                        <a href="#"><span class="material-icons">person</span> Profile</a>
+                        <a href="#"><span class="material-icons">settings</span> Account Settings</a>
+                        <a href="#"><span class="material-icons">help</span> Help Center</a>
+                        <hr>
+                        <a href="#"><span class="material-icons">logout</span> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-item active">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <a href="ads.html" class="sidebar-item">
+                    <span class="material-icons">category</span>
+                    <span>Ad Units</span>
+                </a>
+                <a href="reports.html" class="sidebar-item">
+                    <span class="material-icons">bar_chart</span>
+                    <span>Reports</span>
+                </a>
+                <a href="payments.html" class="sidebar-item">
+                    <span class="material-icons">account_balance</span>
+                    <span>Payments</span>
+                </a>
+                <a href="settings.html" class="sidebar-item">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-title">Analytics</div>
+                <a href="analytics.html" class="sidebar-item">
+                    <span class="material-icons">trending_up</span>
+                    <span>Traffic Trends</span>
+                </a>
+                <a href="visitors.html" class="sidebar-item">
+                    <span class="material-icons">public</span>
+                    <span>Visitor Sources</span>
+                </a>
+                <a href="devices.html" class="sidebar-item">
+                    <span class="material-icons">devices</span>
+                    <span>Device Analysis</span>
+                </a>
+                <a href="geographic.html" class="sidebar-item">
+                    <span class="material-icons">language</span>
+                    <span>Geographic</span>
+                </a>
+                <a href="timeanalysis.html" class="sidebar-item">
+                    <span class="material-icons">schedule</span>
+                    <span>Time Analysis</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Dashboard Overview</h1>
+                <div class="date-range">
+                    <select id="dateRange" class="date-select">
+                        <option value="today">Today</option>
+                        <option value="yesterday">Yesterday</option>
+                        <option value="7days" selected>Last 7 days</option>
+                        <option value="30days">Last 30 days</option>
+                        <option value="thisMonth">This Month</option>
+                        <option value="lastMonth">Last Month</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Estimated Earnings</span>
+                        <span class="material-icons">monetization_on</span>
+                    </div>
+                    <div class="stat-value">$483.44</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>Sep 1 - Dec 28, 2025</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Impressions</span>
+                        <span class="material-icons">visibility</span>
+                    </div>
+                    <div class="stat-value">40,456</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>12.3% vs previous</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Clicks</span>
+                        <span class="material-icons">touch_app</span>
+                    </div>
+                    <div class="stat-value">1,010</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>4.2% vs previous</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Click-through Rate (CTR)</span>
+                        <span class="material-icons">percent</span>
+                    </div>
+                    <div class="stat-value">2.50%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>0.1% vs previous</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Revenue Per Mille (RPM)</span>
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <div class="stat-value">$11.95</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>2.8% vs previous</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Active Ad Units</span>
+                        <span class="material-icons">ad_units</span>
+                    </div>
+                    <div class="stat-value">5</div>
+                    <div class="stat-change neutral">
+                        <span class="material-icons">remove</span>
+                        <span>No change</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Area -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Earnings Trend</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active" data-type="line">Line Chart</button>
+                            <button class="chart-btn" data-type="bar">Bar Chart</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="earningsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Site Performance</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="sitesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ad Unit Performance -->
+            <div class="table-card">
+                <div class="card-header">
+                    <h3>Ad Unit Performance</h3>
+                    <button class="btn-icon">
+                        <span class="material-icons">download</span>
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Ad Unit Name</th>
+                                <th>Impressions</th>
+                                <th>Clicks</th>
+                                <th>CTR</th>
+                                <th>RPM</th>
+                                <th>Earnings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Home Banner</td>
+                                <td>9,856</td>
+                                <td>246</td>
+                                <td>2.50%</td>
+                                <td>$12.35</td>
+                                <td>$121.68</td>
+                            </tr>
+                            <tr>
+                                <td>Sidebar Ad</td>
+                                <td>8,968</td>
+                                <td>224</td>
+                                <td>2.50%</td>
+                                <td>$10.82</td>
+                                <td>$97.05</td>
+                            </tr>
+                            <tr>
+                                <td>Article Content Ad</td>
+                                <td>10,456</td>
+                                <td>256</td>
+                                <td>2.45%</td>
+                                <td>$11.45</td>
+                                <td>$119.72</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile Banner</td>
+                                <td>6,523</td>
+                                <td>163</td>
+                                <td>2.50%</td>
+                                <td>$13.76</td>
+                                <td>$89.75</td>
+                            </tr>
+                            <tr>
+                                <td>In-Feed Ad</td>
+                                <td>4,653</td>
+                                <td>121</td>
+                                <td>2.60%</td>
+                                <td>$14.52</td>
+                                <td>$55.24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script>
+        // 等待 DOM 加载完成后初始化按钮
+        document.addEventListener('DOMContentLoaded', function() {
+            // 用户菜单下拉
+            const userAvatar = document.querySelector('.user-avatar');
+            if (userAvatar) {
+                userAvatar.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling;
+                    if (dropdown) {
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+
+            // 点击其他地方关闭下拉菜单
+            document.addEventListener('click', function() {
+                const dropdown = document.querySelector('.user-dropdown');
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                }
+            });
+
+            // 日期范围选择器
+            const dateRange = document.getElementById('dateRange');
+            if (dateRange) {
+                dateRange.addEventListener('change', function() {
+                    const message = document.createElement('div');
+                    message.style.cssText = `
+                        position: fixed;
+                        top: 80px;
+                        right: 20px;
+                        padding: 16px 24px;
+                        background-color: #fbbc05;
+                        color: white;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                        z-index: 10000;
+                    `;
+                    message.textContent = `Date range changed to: ${this.options[this.selectedIndex].text}`;
+                    document.body.appendChild(message);
+
+                    setTimeout(() => {
+                        message.remove();
+                    }, 2000);
+                });
+            }
+
+            // 导出按钮
+            const exportBtn = document.querySelector('.btn-icon');
+            if (exportBtn) {
+                exportBtn.addEventListener('click', function() {
+                    const message = document.createElement('div');
+                    message.style.cssText = `
+                        position: fixed;
+                        top: 80px;
+                        right: 20px;
+                        padding: 16px 24px;
+                        background-color: #ea4335;
+                        color: white;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                        z-index: 10000;
+                    `;
+                    message.textContent = 'Exporting data...';
+                    document.body.appendChild(message);
+
+                    setTimeout(() => {
+                        message.textContent = 'Data exported successfully!';
+                        setTimeout(() => {
+                            message.remove();
+                        }, 1000);
+                    }, 1000);
+                });
+            }
+
+            console.log('Dashboard buttons initialized');
+        });
+    </script>
+</body>
+</html>

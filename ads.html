@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Units - AdFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🎯</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ads.html" class="active">Ad Units</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </button>
+                    <span class="user-email">ohzhulin@gmail.com</span>
+                    <div class="user-dropdown">
+                        <a href="#"><span class="material-icons">person</span> Profile</a>
+                        <a href="#"><span class="material-icons">settings</span> Account Settings</a>
+                        <a href="#"><span class="material-icons">help</span> Help Center</a>
+                        <hr>
+                        <a href="#"><span class="material-icons">logout</span> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-item">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <a href="ads.html" class="sidebar-item active">
+                    <span class="material-icons">category</span>
+                    <span>Ad Units</span>
+                </a>
+                <a href="reports.html" class="sidebar-item">
+                    <span class="material-icons">bar_chart</span>
+                    <span>Reports</span>
+                </a>
+                <a href="payments.html" class="sidebar-item">
+                    <span class="material-icons">account_balance</span>
+                    <span>Payments</span>
+                </a>
+                <a href="settings.html" class="sidebar-item">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-title">Analytics</div>
+                <a href="analytics.html" class="sidebar-item">
+                    <span class="material-icons">trending_up</span>
+                    <span>Traffic Trends</span>
+                </a>
+                <a href="visitors.html" class="sidebar-item">
+                    <span class="material-icons">public</span>
+                    <span>Visitor Sources</span>
+                </a>
+                <a href="devices.html" class="sidebar-item">
+                    <span class="material-icons">devices</span>
+                    <span>Device Analysis</span>
+                </a>
+                <a href="geographic.html" class="sidebar-item">
+                    <span class="material-icons">language</span>
+                    <span>Geographic</span>
+                </a>
+                <a href="timeanalysis.html" class="sidebar-item">
+                    <span class="material-icons">schedule</span>
+                    <span>Time Analysis</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Ad Units Management</h1>
+                <button class="btn-primary">Create New Ad Unit</button>
+            </header>
+
+            <!-- Ad Units Grid -->
+            <div class="ad-units-grid-full">
+                <div class="ad-unit-detail-card">
+                    <div class="ad-unit-header">
+                        <div class="ad-unit-info">
+                            <h3>Home Banner</h3>
+                            <span class="ad-unit-id">ID: #AU-001</span>
+                        </div>
+                        <div class="ad-unit-status active">
+                            <span class="status-dot"></span>
+                            Active
+                        </div>
+                    </div>
+                    <div class="ad-unit-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Size</span>
+                            <span class="detail-value">728x90</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Placement</span>
+                            <span class="detail-value">Top of page</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Created</span>
+                            <span class="detail-value">Sep 15, 2024</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-stats">
+                        <div class="mini-stat">
+                            <span class="mini-label">Impressions</span>
+                            <span class="mini-value">15,432</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">Clicks</span>
+                            <span class="mini-value">386</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">CTR</span>
+                            <span class="mini-value">2.50%</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">RPM</span>
+                            <span class="mini-value">$11.20</span>
+                        </div>
+                        <div class="mini-stat highlight">
+                            <span class="mini-label">Earnings</span>
+                            <span class="mini-value">$172.84</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">Get Code</button>
+                        <button class="btn-outline">Pause</button>
+                    </div>
+                </div>
+
+                <div class="ad-unit-detail-card">
+                    <div class="ad-unit-header">
+                        <div class="ad-unit-info">
+                            <h3>Sidebar Ad</h3>
+                            <span class="ad-unit-id">ID: #AU-002</span>
+                        </div>
+                        <div class="ad-unit-status active">
+                            <span class="status-dot"></span>
+                            Active
+                        </div>
+                    </div>
+                    <div class="ad-unit-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Size</span>
+                            <span class="detail-value">300x250</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Placement</span>
+                            <span class="detail-value">Right sidebar</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Created</span>
+                            <span class="detail-value">Sep 15, 2024</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-stats">
+                        <div class="mini-stat">
+                            <span class="mini-label">Impressions</span>
+                            <span class="mini-value">12,231</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">Clicks</span>
+                            <span class="mini-value">298</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">CTR</span>
+                            <span class="mini-value">2.44%</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">RPM</span>
+                            <span class="mini-value">$9.85</span>
+                        </div>
+                        <div class="mini-stat highlight">
+                            <span class="mini-label">Earnings</span>
+                            <span class="mini-value">$120.47</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">Get Code</button>
+                        <button class="btn-outline">Pause</button>
+                    </div>
+                </div>
+
+                <div class="ad-unit-detail-card">
+                    <div class="ad-unit-header">
+                        <div class="ad-unit-info">
+                            <h3>Article Content Ad</h3>
+                            <span class="ad-unit-id">ID: #AU-003</span>
+                        </div>
+                        <div class="ad-unit-status active">
+                            <span class="status-dot"></span>
+                            Active
+                        </div>
+                    </div>
+                    <div class="ad-unit-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Size</span>
+                            <span class="detail-value">Responsive</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Placement</span>
+                            <span class="detail-value">In article</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Created</span>
+                            <span class="detail-value">Oct 1, 2024</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-stats">
+                        <div class="mini-stat">
+                            <span class="mini-label">Impressions</span>
+                            <span class="mini-value">13,891</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">Clicks</span>
+                            <span class="mini-value">352</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">CTR</span>
+                            <span class="mini-value">2.53%</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">RPM</span>
+                            <span class="mini-value">$10.45</span>
+                        </div>
+                        <div class="mini-stat highlight">
+                            <span class="mini-label">Earnings</span>
+                            <span class="mini-value">$145.16</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">Get Code</button>
+                        <button class="btn-outline">Pause</button>
+                    </div>
+                </div>
+
+                <div class="ad-unit-detail-card">
+                    <div class="ad-unit-header">
+                        <div class="ad-unit-info">
+                            <h3>Mobile Banner</h3>
+                            <span class="ad-unit-id">ID: #AU-004</span>
+                        </div>
+                        <div class="ad-unit-status active">
+                            <span class="status-dot"></span>
+                            Active
+                        </div>
+                    </div>
+                    <div class="ad-unit-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Size</span>
+                            <span class="detail-value">320x50</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Placement</span>
+                            <span class="detail-value">Mobile top</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Created</span>
+                            <span class="detail-value">Oct 10, 2024</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-stats">
+                        <div class="mini-stat">
+                            <span class="mini-label">Impressions</span>
+                            <span class="mini-value">4,234</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">Clicks</span>
+                            <span class="mini-value">105</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">CTR</span>
+                            <span class="mini-value">2.48%</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">RPM</span>
+                            <span class="mini-value">$8.92</span>
+                        </div>
+                        <div class="mini-stat highlight">
+                            <span class="mini-label">Earnings</span>
+                            <span class="mini-value">$37.77</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">Get Code</button>
+                        <button class="btn-outline">Pause</button>
+                    </div>
+                </div>
+
+                <div class="ad-unit-detail-card">
+                    <div class="ad-unit-header">
+                        <div class="ad-unit-info">
+                            <h3>In-Feed Ad</h3>
+                            <span class="ad-unit-id">ID: #AU-005</span>
+                        </div>
+                        <div class="ad-unit-status active">
+                            <span class="status-dot"></span>
+                            Active
+                        </div>
+                    </div>
+                    <div class="ad-unit-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Size</span>
+                            <span class="detail-value">Responsive</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Placement</span>
+                            <span class="detail-value">Content flow</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Created</span>
+                            <span class="detail-value">Nov 5, 2024</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-stats">
+                        <div class="mini-stat">
+                            <span class="mini-label">Impressions</span>
+                            <span class="mini-value">2,446</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">Clicks</span>
+                            <span class="mini-value">64</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">CTR</span>
+                            <span class="mini-value">2.62%</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-label">RPM</span>
+                            <span class="mini-value">$3.58</span>
+                        </div>
+                        <div class="mini-stat highlight">
+                            <span class="mini-label">Earnings</span>
+                            <span class="mini-value">$8.76</span>
+                        </div>
+                    </div>
+                    <div class="ad-unit-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">Get Code</button>
+                        <button class="btn-outline">Pause</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        .ad-units-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .ad-unit-detail-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .ad-unit-detail-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .ad-unit-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .ad-unit-info h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        .ad-unit-id {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        .ad-unit-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .ad-unit-status.active {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #34a853;
+            border-radius: 50%;
+        }
+        .ad-unit-details {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f1f3f4;
+        }
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .detail-label {
+            font-size: 12px;
+            color: #5f6368;
+            text-transform: uppercase;
+        }
+        .detail-value {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .ad-unit-stats {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .mini-stat {
+            text-align: center;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .mini-stat.highlight {
+            background: #e8f0fe;
+        }
+        .mini-stat .mini-label {
+            display: block;
+            font-size: 12px;
+            color: #5f6368;
+            margin-bottom: 4px;
+        }
+        .mini-stat .mini-value {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #202124;
+        }
+        .mini-stat.highlight .mini-value {
+            color: #1a73e8;
+        }
+        .ad-unit-actions {
+            display: flex;
+            gap: 12px;
+        }
+        .btn-outline {
+            padding: 8px 16px;
+            background: white;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            color: #5f6368;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            background: #f1f3f4;
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>

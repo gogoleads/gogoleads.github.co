@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographic - AdFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <span class="logo-a">A</span>
+                        <span class="logo-d">d</span>
+                        <span class="logo-f">F</span>
+                        <span class="logo-l">l</span>
+                        <span class="logo-o">o</span>
+                        <span class="logo-w">w</span>
+                    </div>
+                </div>
+                <div class="logo-badge">BETA</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ads.html">Ad Units</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </button>
+                    <span class="user-email">ohzhulin@gmail.com</span>
+                    <div class="user-dropdown">
+                        <a href="#"><span class="material-icons">person</span> Profile</a>
+                        <a href="#"><span class="material-icons">settings</span> Account Settings</a>
+                        <a href="#"><span class="material-icons">help</span> Help Center</a>
+                        <hr>
+                        <a href="#"><span class="material-icons">logout</span> Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-item">
+                    <span class="material-icons">dashboard</span>
+                    <span>Overview</span>
+                </a>
+                <a href="ads.html" class="sidebar-item">
+                    <span class="material-icons">category</span>
+                    <span>Ad Units</span>
+                </a>
+                <a href="reports.html" class="sidebar-item">
+                    <span class="material-icons">bar_chart</span>
+                    <span>Reports</span>
+                </a>
+                <a href="payments.html" class="sidebar-item">
+                    <span class="material-icons">account_balance</span>
+                    <span>Payments</span>
+                </a>
+                <a href="settings.html" class="sidebar-item">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-section-title">Analytics</div>
+                <a href="analytics.html" class="sidebar-item">
+                    <span class="material-icons">trending_up</span>
+                    <span>Traffic Trends</span>
+                </a>
+                <a href="visitors.html" class="sidebar-item">
+                    <span class="material-icons">public</span>
+                    <span>Visitor Sources</span>
+                </a>
+                <a href="devices.html" class="sidebar-item">
+                    <span class="material-icons">devices</span>
+                    <span>Device Analysis</span>
+                </a>
+                <a href="geographic.html" class="sidebar-item active">
+                    <span class="material-icons">language</span>
+                    <span>Geographic</span>
+                </a>
+                <a href="timeanalysis.html" class="sidebar-item">
+                    <span class="material-icons">schedule</span>
+                    <span>Time Analysis</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>Geographic Distribution</h1>
+                <div class="date-range">
+                    <select class="date-select">
+                        <option>Last 7 days</option>
+                        <option>Last 30 days</option>
+                        <option>This Month</option>
+                        <option>Last Month</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Geographic Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">China</span>
+                        <span class="material-icons">flag</span>
+                    </div>
+                    <div class="stat-value">72.3%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>534 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">United States</span>
+                        <span class="material-icons">flag</span>
+                    </div>
+                    <div class="stat-value">12.5%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>92 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Total Revenue</span>
+                        <span class="material-icons">payments</span>
+                    </div>
+                    <div class="stat-value">$28.67</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>Last 7 days</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">RPM</span>
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <div class="stat-value">$10.59</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>+5.2% vs last period</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Singapore</span>
+                        <span class="material-icons">flag</span>
+                    </div>
+                    <div class="stat-value">5.8%</div>
+                    <div class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        <span>43 visitors</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Japan</span>
+                        <span class="material-icons">flag</span>
+                    </div>
+                    <div class="stat-value">4.2%</div>
+                    <div class="stat-change neutral">
+                        <span class="material-icons">remove</span>
+                        <span>31 visitors</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Visitors by Country</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="countryChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Revenue by Country</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="revenueByCountryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Country Details Table -->
+            <div class="table-card">
+                <div class="card-header">
+                    <h3>Country Performance Details</h3>
+                    <button class="btn-icon">
+                        <span class="material-icons">download</span>
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>Visitors</th>
+                                <th>Sessions</th>
+                                <th>Avg. Duration</th>
+                                <th>Bounce Rate</th>
+                                <th>Revenue</th>
+                                <th>RPM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🇨🇳 China</td>
+                                <td>8,534</td>
+                                <td>12,456</td>
+                                <td>4m 23s</td>
+                                <td>35.2%</td>
+                                <td>$285.67</td>
+                                <td>$10.15</td>
+                            </tr>
+                            <tr>
+                                <td>🇺🇸 United States</td>
+                                <td>1,456</td>
+                                <td>2,134</td>
+                                <td>5m 45s</td>
+                                <td>28.5%</td>
+                                <td>$98.45</td>
+                                <td>$18.45</td>
+                            </tr>
+                            <tr>
+                                <td>🇸🇬 Singapore</td>
+                                <td>678</td>
+                                <td>923</td>
+                                <td>6m 12s</td>
+                                <td>25.4%</td>
+                                <td>$45.67</td>
+                                <td>$21.20</td>
+                            </tr>
+                            <tr>
+                                <td>🇯🇵 Japan</td>
+                                <td>498</td>
+                                <td>678</td>
+                                <td>4m 56s</td>
+                                <td>32.8%</td>
+                                <td>$28.34</td>
+                                <td>$14.50</td>
+                            </tr>
+                            <tr>
+                                <td>🇩🇪 Germany</td>
+                                <td>334</td>
+                                <td>456</td>
+                                <td>5m 34s</td>
+                                <td>30.1%</td>
+                                <td>$18.76</td>
+                                <td>$16.80</td>
+                            </tr>
+                            <tr>
+                                <td>🇬🇧 United Kingdom</td>
+                                <td>234</td>
+                                <td>312</td>
+                                <td>5m 12s</td>
+                                <td>29.8%</td>
+                                <td>$12.45</td>
+                                <td>$17.50</td>
+                            </tr>
+                            <tr>
+                                <td>🇦🇺 Australia</td>
+                                <td>178</td>
+                                <td>245</td>
+                                <td>6m 23s</td>
+                                <td>26.5%</td>
+                                <td>$10.23</td>
+                                <td>$19.80</td>
+                            </tr>
+                            <tr>
+                                <td>🇨🇦 Canada</td>
+                                <td>145</td>
+                                <td>198</td>
+                                <td>5m 45s</td>
+                                <td>28.9%</td>
+                                <td>$8.90</td>
+                                <td>$17.20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Country Chart
+        const countryCtx = document.getElementById('countryChart').getContext('2d');
+        window.countryChartInstance = new Chart(countryCtx, {
+            type: 'bar',
+            data: {
+                labels: ['China', 'USA', 'Singapore', 'Japan', 'Germany', 'UK', 'Australia', 'Canada'],
+                datasets: [{
+                    label: 'Visitors',
+                    data: [506, 86, 40, 29, 20, 14, 11, 9],
+                    backgroundColor: [
+                        '#ea4335',
+                        '#1a73e8',
+                        '#34a853',
+                        '#fbbc05',
+                        '#9c27b0',
+                        '#ff5722',
+                        '#607d8b',
+                        '#795548'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Revenue by Country Chart
+        const revenueCtx = document.getElementById('revenueByCountryChart').getContext('2d');
+        window.revenueChartInstance = new Chart(revenueCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['China', 'USA', 'Singapore', 'Japan', 'Germany', 'Others'],
+                datasets: [{
+                    data: [16.89, 5.82, 2.69, 1.67, 1.11, 1.87],
+                    backgroundColor: [
+                        '#ea4335',
+                        '#1a73e8',
+                        '#34a853',
+                        '#fbbc05',
+                        '#9c27b0',
+                        '#607d8b'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // User menu dropdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const userAvatar = document.querySelector('.user-avatar');
+            if (userAvatar) {
+                userAvatar.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const dropdown = this.nextElementSibling.nextElementSibling;
+                    if (dropdown) {
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+
+            document.addEventListener('click', function() {
+                const dropdown = document.querySelector('.user-dropdown');
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        });
+
+        // Time selector functionality
+        const dateSelect = document.querySelector('.date-select');
+        if (dateSelect) {
+            dateSelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                updateGeographicStats(selectedValue);
+            });
+        }
+
+        // Different data sets for each time period
+        const timePeriodData = {
+            'Last 7 days': {
+                china: 534,
+                usa: 92,
+                singapore: 43,
+                japan: 31,
+                germany: 20,
+                uk: 14,
+                australia: 11,
+                canada: 9,
+                revenue: 28.67,
+                rpm: 10.59
+            },
+            'Last 30 days': {
+                china: 2289,
+                usa: 395,
+                singapore: 183,
+                japan: 133,
+                germany: 85,
+                uk: 59,
+                australia: 45,
+                canada: 37,
+                revenue: 122.89,
+                rpm: 10.52
+            },
+            'This Month': {
+                china: 2136,
+                usa: 369,
+                singapore: 171,
+                japan: 124,
+                germany: 79,
+                uk: 55,
+                australia: 42,
+                canada: 34,
+                revenue: 114.78,
+                rpm: 10.48
+            },
+            'Last Month': {
+                china: 2291,
+                usa: 396,
+                singapore: 184,
+                japan: 133,
+                germany: 85,
+                uk: 60,
+                australia: 46,
+                canada: 37,
+                revenue: 123.45,
+                rpm: 10.55
+            }
+        };
+
+        function updateGeographicStats(timePeriod) {
+            const data = timePeriodData[timePeriod];
+            if (!data) return;
+
+            // Calculate total visitors
+            const newTotalVisitors = data.china + data.usa + data.singapore + data.japan +
+                                      data.germany + data.uk + data.australia + data.canada;
+
+            // Calculate percentages
+            const chinaPercentage = ((data.china / newTotalVisitors) * 100).toFixed(1);
+            const usaPercentage = ((data.usa / newTotalVisitors) * 100).toFixed(1);
+            const singaporePercentage = ((data.singapore / newTotalVisitors) * 100).toFixed(1);
+            const japanPercentage = ((data.japan / newTotalVisitors) * 100).toFixed(1);
+
+            // Get all stat cards and update them
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                const statValue = card.querySelector('.stat-value');
+                const statChangeText = card.querySelector('.stat-change span:last-child');
+
+                if (!statValue) return;
+
+                switch(index) {
+                    case 0: // China
+                        statValue.textContent = `${chinaPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.china.toLocaleString()} visitors`;
+                        break;
+                    case 1: // USA
+                        statValue.textContent = `${usaPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.usa.toLocaleString()} visitors`;
+                        break;
+                    case 2: // Total Revenue
+                        statValue.textContent = `$${data.revenue.toFixed(2)}`;
+                        break;
+                    case 3: // RPM
+                        statValue.textContent = `$${data.rpm}`;
+                        break;
+                    case 4: // Singapore
+                        statValue.textContent = `${singaporePercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.singapore.toLocaleString()} visitors`;
+                        break;
+                    case 5: // Japan
+                        statValue.textContent = `${japanPercentage}%`;
+                        if (statChangeText) statChangeText.textContent = `${data.japan.toLocaleString()} visitors`;
+                        break;
+                }
+            });
+
+            updateGeographicTable(timePeriod);
+            updateGeographicCharts(timePeriod);
+        }
+
+        function updateGeographicTable(timePeriod) {
+            const tableData = {
+                'Last 7 days': [
+                    { visitors: 506, sessions: 739, revenue: 16.89 },
+                    { visitors: 86, sessions: 127, revenue: 5.82 },
+                    { visitors: 40, sessions: 55, revenue: 2.69 },
+                    { visitors: 29, sessions: 40, revenue: 1.67 },
+                    { visitors: 20, sessions: 27, revenue: 1.11 },
+                    { visitors: 14, sessions: 19, revenue: 0.74 },
+                    { visitors: 11, sessions: 15, revenue: 0.61 },
+                    { visitors: 9, sessions: 12, revenue: 0.53 }
+                ],
+                'Last 30 days': [
+                    { visitors: 2168, sessions: 3166, revenue: 72.45 },
+                    { visitors: 370, sessions: 543, revenue: 25.06 },
+                    { visitors: 172, sessions: 234, revenue: 11.58 },
+                    { visitors: 126, sessions: 172, revenue: 7.20 },
+                    { visitors: 85, sessions: 116, revenue: 4.78 },
+                    { visitors: 59, sessions: 80, revenue: 3.18 },
+                    { visitors: 45, sessions: 62, revenue: 2.61 },
+                    { visitors: 37, sessions: 50, revenue: 2.27 }
+                ],
+                'This Month': [
+                    { visitors: 2025, sessions: 2957, revenue: 67.70 },
+                    { visitors: 345, sessions: 506, revenue: 23.46 },
+                    { visitors: 161, sessions: 219, revenue: 10.82 },
+                    { visitors: 117, sessions: 160, revenue: 6.73 },
+                    { visitors: 79, sessions: 108, revenue: 4.47 },
+                    { visitors: 55, sessions: 75, revenue: 2.98 },
+                    { visitors: 42, sessions: 58, revenue: 2.44 },
+                    { visitors: 34, sessions: 46, revenue: 2.12 }
+                ],
+                'Last Month': [
+                    { visitors: 2172, sessions: 3172, revenue: 72.78 },
+                    { visitors: 371, sessions: 544, revenue: 25.12 },
+                    { visitors: 172, sessions: 237, revenue: 11.61 },
+                    { visitors: 126, sessions: 173, revenue: 7.23 },
+                    { visitors: 85, sessions: 116, revenue: 4.80 },
+                    { visitors: 60, sessions: 80, revenue: 3.20 },
+                    { visitors: 46, sessions: 63, revenue: 2.64 },
+                    { visitors: 37, sessions: 51, revenue: 2.28 }
+                ]
+            };
+
+            const data = tableData[timePeriod];
+            if (!data) return;
+
+            const tableRows = document.querySelectorAll('.data-table tbody tr');
+            tableRows.forEach((row, index) => {
+                if (index < data.length) {
+                    const cells = row.querySelectorAll('td');
+                    cells[1].textContent = data[index].visitors.toLocaleString();
+                    cells[2].textContent = data[index].sessions.toLocaleString();
+                    cells[5].textContent = `$${data[index].revenue.toFixed(2)}`;
+                }
+            });
+        }
+
+        function updateGeographicCharts(timePeriod) {
+            const chartData = {
+                'Last 7 days': [506, 86, 40, 29, 20, 14, 11, 9],
+                'Last 30 days': [2168, 370, 172, 126, 85, 59, 45, 37],
+                'This Month': [2025, 345, 161, 117, 79, 55, 42, 34],
+                'Last Month': [2172, 371, 172, 126, 85, 60, 46, 37]
+            };
+
+            const revenueData = {
+                'Last 7 days': [16.89, 5.82, 2.69, 1.67, 1.11, 1.87, 0.61, 0.53],
+                'Last 30 days': [72.45, 25.06, 11.58, 7.20, 4.78, 8.02, 2.61, 2.27],
+                'This Month': [67.70, 23.46, 10.82, 6.73, 4.47, 7.53, 2.44, 2.12],
+                'Last Month': [72.78, 25.12, 11.61, 7.23, 4.80, 8.06, 2.64, 2.28]
+            };
+
+            const countryChart = document.getElementById('countryChart');
+            if (countryChart && window.countryChartInstance) {
+                window.countryChartInstance.data.datasets[0].data = chartData[timePeriod];
+                window.countryChartInstance.update();
+            }
+
+            const revenueChart = document.getElementById('revenueByCountryChart');
+            if (revenueChart && window.revenueChartInstance) {
+                window.revenueChartInstance.data.datasets[0].data = revenueData[timePeriod];
+                window.revenueChartInstance.update();
+            }
+        }
+
+        // Store chart instances and trigger initial update
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart instances are already created above
+            // Trigger initial update
+            setTimeout(() => {
+                updateGeographicStats('Last 7 days');
+            }, 100);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,877 @@
+/* 全局变量 */
+:root {
+    --primary-color: #1a73e8;
+    --primary-hover: #1765cc;
+    --secondary-color: #5f6368;
+    --text-color: #202124;
+    --text-secondary: #5f6368;
+    --bg-color: #ffffff;
+    --bg-gray: #f8f9fa;
+    --border-color: #dadce0;
+    --success-color: #34a853;
+    --warning-color: #fbbc05;
+    --error-color: #ea4335;
+    --shadow-sm: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+    --shadow-md: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+    --shadow-lg: 0 2px 8px 0 rgba(60,64,67,0.3), 0 5px 15px 3px rgba(60,64,67,0.15);
+}
+
+/* 重置和基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo 样式 */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-text span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 -1px;
+}
+
+.logo-a {
+    color: #4285f4;
+}
+
+.logo-d {
+    color: #ea4335;
+}
+
+.logo-f {
+    color: #fbbc05;
+}
+
+.logo-l {
+    color: #4285f4;
+}
+
+.logo-o {
+    color: #34a853;
+}
+
+.logo-w {
+    color: #ea4335;
+}
+
+.logo-badge {
+    background-color: #34a853;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.nav-logo h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.btn-signin {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-signin:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Hero 区域 */
+.hero {
+    padding: 80px 20px;
+    background-color: var(--bg-color);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--text-color);
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    padding: 12px 32px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-gray);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.dashboard-preview {
+    background-color: var(--bg-gray);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.preview-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 20px;
+}
+
+.preview-mini-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.mini-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.mini-card .material-icons {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.mini-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.mini-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.preview-amount {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 16px 0;
+}
+
+.preview-change {
+    color: var(--success-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 三步流程 */
+.process {
+    padding: 80px 20px;
+    background-color: var(--bg-gray);
+}
+
+.process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.process h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.step-icon .material-icons {
+    font-size: 36px;
+}
+
+.step h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.step p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+/* Google 产品集成 */
+.google-integration {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+}
+
+.integration-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.integration-container h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.integration-desc {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+/* Google Ads Logo */
+.google-ads-logo {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.logo-ads {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.logo-ads .letter {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0 -2px;
+}
+
+.logo-ads .g {
+    color: #4285f4;
+}
+
+.logo-ads .o1 {
+    color: #ea4335;
+}
+
+.logo-ads .o2 {
+    color: #fbbc05;
+}
+
+.logo-ads .g2 {
+    color: #4285f4;
+}
+
+.logo-ads .l {
+    color: #34a853;
+}
+
+.logo-ads .e {
+    color: #ea4335;
+}
+
+.separator {
+    font-size: 24px;
+    font-weight: 500;
+    color: #5f6368;
+    margin-left: 16px;
+}
+
+.logo-desc {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-top: 16px;
+}
+
+.integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+}
+
+.integration-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: var(--shadow-sm);
+}
+
+.integration-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.integration-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.integration-icon .material-icons {
+    font-size: 32px;
+    color: white;
+}
+
+.google-blue {
+    background: linear-gradient(135deg, #4285f4, #1a73e8);
+}
+
+.google-red {
+    background: linear-gradient(135deg, #ea4335, #d33b2c);
+}
+
+.google-yellow {
+    background: linear-gradient(135deg, #fbbc05, #f9ab00);
+}
+
+.google-green {
+    background: linear-gradient(135deg, #34a853, #2e7d32);
+}
+
+.integration-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+.integration-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* 功能特点 */
+.features {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features h2 {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-card .material-icons {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Google 信息部分 */
+.google-info {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid var(--border-color);
+}
+
+.google-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.google-info-container h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.google-info-container > p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.google-certification {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cert-badge {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s;
+}
+
+.cert-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.cert-badge .material-icons {
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+.cert-badge span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* 收益计算器 */
+.calculator {
+    padding: 80px 20px;
+    background-color: var(--bg-gray);
+}
+
+.calculator-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calculator h2 {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.calculator-box {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: end;
+}
+
+.calculator-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-input label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.calculator-input input {
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.calculator-input input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.calculator-result {
+    text-align: center;
+}
+
+.calculator-result p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.calculator-result h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* 页脚 */
+.footer {
+    background-color: var(--text-color);
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.google-partnership {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.google-partnership > span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.google-mini-logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.g-letter {
+    width: 24px;
+    height: 24px;
+    background-color: #4285f4;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.google-text {
+    color: #fbbc05;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.partnership-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.footer-bottom ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .process-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .calculator-box {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-bottom ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .process {
+        padding: 60px 20px;
+    }
+
+    .features {
+        padding: 60px 20px;
+    }
+
+    .calculator {
+        padding: 60px 20px;
+    }
+}
